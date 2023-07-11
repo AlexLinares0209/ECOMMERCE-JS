@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iniciar sesión</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1>Iniciar sesión</h1>
+
+        <form class="form" id="loginForm">
+
+            <div class="input-group input-1">
+                <input type="email" class="input" placeholder="" id="email" name="email" required>
+                <label class="placeholder">Correo</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-group input-4">
+                <input type="password" class="input" placeholder="" id="password" name="password" required>
+                <label class="placeholder">Contraseña</label>
+                <i class="fa fa-eye-slash password-toggle" aria-hidden="true"></i>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./JS/viewPassword.js"></script>
+    <script src="./JS/sesion.js"></script>
+</body>
+
+</html>

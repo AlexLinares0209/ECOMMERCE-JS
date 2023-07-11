@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopcart</title>
+
+    <link rel="shortcut icon" href="./images/e-commerce.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./CSS/estilos.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <a href="index.html" class="logo"><i class="fas fa-shopping-cart"></i> Shopcart</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="nav-bar">
+            <ul id="links">
+                <li><a id="active" class="actived" href="index.html">inicio</a></li>
+                <li><a href="#">nosotros</a></li>
+                <li><a href="#">catálogo</a></li>
+                <li><a href="#">faq</a></li>
+                <li>
+                    <input type="text" name="" id="inputBusqueda" class="input-busqueda" placeholder="Buscar productos">
+                    <i class="fas fa-search" id="btnBuscar"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-heart nav-heart favoritos"
+                        id="botonFavoritos"
+                        type="button" 
+                        data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasWithBothOptions" 
+                        aria-controls="offcanvasWithBothOptions">
+                    </i>
+                </li>
+
+                <li class="iconos"><i class="fa-solid fa-user" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu text-center">
+                        <li class="dropdown-item" id="user"></li>
+                        <li><a class="dropdown-item" href="registro.html">Registrarse</a></li>
+                        <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+                      </ul>
+                </li>
+                
+                <li class="icono-carrito">
+                    <i class="fa-solid fa-cart-shopping carrito"
+                    id="botonCarrito"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                </i>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    
+        <!-- 
+            <div class="hero d-flex align-items-center text-white">
+        <div class="container text-center">
+            <h1 class="display-5">Hasta un 50% en Prendas Seleccionadas</h1>
+            <p class="lead">Descubre nuestra amplia variedad de prendas de moda que te harán lucir elegante y a la moda
+                en cualquier ocasión.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+        </div>
+    </div>
+         -->
+
+
+   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+  
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-content">
+          <div>
+            <h1 class="display-5">El placer de vestir bien: nuestra tienda de moda en línea</h1>
+            <p class="lead">Descubre nuestra amplia variedad de prendas de moda que te harán lucir elegante y a la moda
+                en cualquier ocasión.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <div>
+            <h1 class="display-5">Explora la moda sin límites en nuestra tienda en línea</h1>
+            <p class="lead">Descubre nuestra amplia variedad de prendas de moda que te harán lucir elegante y a la moda
+                en cualquier ocasión.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <div>
+            <h1 class="display-5">Inspírate y haz una declaración de estilo con nosotros</h1>
+            <p class="lead">Descubre nuestra amplia variedad de prendas de moda que te harán lucir elegante y a la moda
+                en cualquier ocasión.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <div>
+            <h1 class="display-5">Encuentra el outfit perfecto para cada ocasión</h1>
+            <p class="lead">Descubre nuestra amplia variedad de prendas de moda que te harán lucir elegante y a la moda
+                en cualquier ocasión.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <div>
+            <h1 class="display-5">Moda sin límites: encuentra tu look ideal sin salir de casa</h1>
+            <p class="lead">Descubre nuestra amplia variedad de prendas de moda que te harán lucir elegante y a la moda
+                en cualquier ocasión.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  
+
+    <div class="caja-contenedor-cards">
+        <h2 class="titulo-card" style="text-align: center;">NUEVOS INGRESOS</h2>
+        <div class="contenedor-cards" id="contenido">
+        
+        </div>
+    </div>
+
+    <div id="productos-container" class="container">
+        <!-- Aquí se mostrarán los productos -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Producto</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="contenido-producto" class="row">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenedor-alertas"></div>
+
+    <!-- OFF CANVAS FAVORITOS -->
+
+    <!-- 
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Favoritos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="contenido-favoritos" class="row">
+            </div>
+        </div>
+      </div>
+     -->
+
+
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Favoritos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="contenido-favoritos" class="row">
+            </div>
+        </div>
+      </div>
+
+
+    <!-- OFF CANVAS CARRITO -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="contenido-carrito" class="row">
+            </div>
+            <div id="alerta-stock">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="padre">
+        <div class="hijo">
+          <div class="nieto">
+            <h2>La moda está en tu estilo.</h2>
+          <p>Compra ahora</p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <div class="hijo">
+          <div class="nieto">
+            <h2>Sé audaz, sé tú misma.</h2>
+          <p>Compra ahora</p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <div class="hijo">
+          <div class="nieto">
+            <h2>La moda es tu forma de expresión.</h2>
+          <p>Compra ahora</p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <div class="hijo">
+          <div class="nieto">
+            <h2>Viste tus sueños, crea tendencias.</h2>
+          <p>Compra ahora</p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="contenedor-footer-informacion">
+                <div class="footer-informacion">
+                    <h2>CONTACTO</h2>
+                    <ul>
+                        <li>Dirección:
+                            Lima, Perú.</span></li>
+                        <li>WhatsApp:
+                            901204711</li>
+                        <li>Email:
+                            alexlinares0209@gmail.com</li>
+                        <li>Horario:
+                            Lun - Sáb / 9:00AM - 10:00PM</li>
+                        <li>Tiempos de Envío</li>
+                        <li>Mi Cuenta</li>
+                        <li>Nosotros</li>
+                        <li>Política de Privacidad</li>
+                    </ul>
+                </div>
+                <div class="footer-informacion">
+                    <h2>SERVICIO AL CLIENTE</h2>
+                    <ul>
+                        <li>Compramos tu Camiseta</li>
+                        <li>Nuestros Productos</li>
+                        <li>Métodos de Pago</li>
+                        <li>Seguimiento</li>
+                        <li>Tiempos de Envío</li>
+                        <li>Mi Cuenta</li>
+                        <li>Nosotros</li>
+                        <li>Política de Privacidad</li>
+                    </ul>
+                </div>
+                <div class="footer-informacion">
+                    <h2>ETIQUETAS POPULARES</h2>
+                    <ul class="populares">
+                        <li>22/23</li>
+                        <li>Navigata</li>
+                        <li>A pedido</li>
+                        <li>Edición Especial</li>
+                        <li>Entrega Inmediata</li>
+                        <li>Ofertas</li>
+                        <li>Descuentos</li>
+                    </ul>
+                </div>
+                <div class="footer-informacion">
+                    <h2>SUSCRÍBETE AL BOLETÍN</h2>
+                    <p>Obtenga toda la información reciente sobre eventos, <br> productos y ofertas. <br> Suscríbase al boletín de noticias:</p>
+                    <form action="">
+                        <div class="">
+                            <input type="email" placeholder="Tu correo electrónico">
+                        </div>
+                        <div class="contenedor-boton">
+                            <button type="submit" class="sub">SUSCRIBIRME</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="contenedor-footer-derechos">
+            <p>shopcart. 2023 - Todos los derechos reservados</p>
+            <ul>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+                <li><i class="fa-brands fa-cc-paypal"></i></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script src="./JS/swiper.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script src="./JS/carrito.js"></script>
+    <!-- <script src="./JS/favoritos.js"></script> -->
+    <script src="./JS/favoritos.js"></script>
+    <script src="./JS/verProductos.js"></script>
+    <script src="./JS/funcionesCarrito.js"></script>
+    <script src="./JS/buscarProducto.js"></script>
+    <!-- <script src="./JS/rango.js"></script> -->
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>

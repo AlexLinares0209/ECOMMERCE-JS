@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/registro.css">
+
+</head>
+
+
+<body>
+    
+    <div class="container">
+        <h1>Registro de usuario</h1>
+        
+        <form class="form" id="registroForm">
+
+            <div class="input-group input-1">
+                <input type="text" class="input" placeholder="" id="username" name="username" required>
+                <label class="placeholder">Nombre</label>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-group input-2">
+                <input type="text" class="input" placeholder="" id="lastname" name="lastname" required>
+                <label class="placeholder">Apellidos</label>
+            </div>
+            <div class="input-group input-3">
+                <input type="text" class="input" placeholder="" type="email" id="email" name="email" required>
+                <label class="placeholder">Correo</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-group input-4">
+                <input type="password" class="input" placeholder="" id="password" name="password" required>
+                <label class="placeholder">Contraseña</label>
+                <i class="fa fa-eye-slash password-toggle" aria-hidden="true"></i>
+            </div>
+            <div id="resultado"></div>
+            <button type="submit">Registrarse</button>
+            
+        </form>
+
+    </div>
+
+    <script src="./JS/pwd.js"></script>
+    <script src="./JS/viewPassword.js"></script>
+    <script src="./JS/registro.js"></script>
+</body>
+</html>
