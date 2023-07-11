@@ -191,11 +191,16 @@ nav .actived {
 }
 
 header nav ul li .input-busqueda {
-    width: 400px;
+    width: 250px;
     border: none;
     outline: none;
     padding: .2rem .5rem;
     border-radius: 4px;
+    font-size: .8rem;
+}
+
+.input-busqueda::placeholder {
+    font-size: .8rem;
 }
 
 .fa-search {
@@ -630,10 +635,12 @@ footer {
         text-align: center;
         row-gap: 2rem;
         line-height: 30px;
+        padding-left: 0;
     }
 
     header nav ul li a {
         font-size: .8rem;
+        
     }
 
     #check:checked~nav {
@@ -641,7 +648,7 @@ footer {
     }
 
     header nav ul li .input-busqueda {
-        width: 200px;
+        width: 180px;
         border: none;
         outline: none;
         padding: .2rem .5rem;
