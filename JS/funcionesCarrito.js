@@ -25,9 +25,9 @@ const agregarProducto = (id) => {
 
                 Toastify({
                     text: 'Producto agregado al carrito',
-                    duration: 3000, 
+                    duration: 3000,
                     gravity: 'bottom',
-                    position: 'left', 
+                    position: 'left',
                     backgroundColor: '#198754',
                     stopOnFocus: true
                 }).showToast()
@@ -133,49 +133,38 @@ const disminuirCantidad = (id) => {
 
 function mostrarAlertaCompra() {
 
-    const carrito = cargarCarritoLS()
+    //const carrito = cargarCarritoLS()
+
     // Verificar si el usuario ha iniciado sesión
     const isLoggedIn = sessionStorage.getItem('isLoggedIn')
 
-    let listaProductos = ''
+    //let listaProductos = ''
 
     if (isLoggedIn === 'true') {
-
-        carrito.forEach((producto) => {
-            listaProductos += `${producto.nombre} - ${producto.descripcion} - ${producto.cantidad} ud. <br>`
-        })
-
-        // El usuario ha iniciado sesión, mostrar la alerta de compra exitosa con SweetAlert
-        Swal.fire({
-            icon: 'success',
-            title: 'Compra realizada con éxito',
-            html: `¡Gracias por tu compra! <br> ${listaProductos} <br> Recibirá un correo en breve.`,
-            confirmButtonText: 'Aceptar'
-        })
-
-        vaciarCarrito()
-
+        // Usuario ha iniciado sesión, redirigir a envio.html
+        window.location.href = 'envio.html'
+        //vaciarCarrito()
     } else {
-        // El usuario no ha iniciado sesión, mostrar la alerta de registrarse o iniciar sesión con SweetAlert
+        // Usuario no ha iniciado sesión, mostrar alerta con opciones de registro o inicio de sesión
         Swal.fire({
+            title: 'Registrarse o iniciar sesión',
+            text: 'Para realizar una compra, debes registrarte o iniciar sesión.',
             icon: 'info',
-            title: '¡Alerta!',
-            text: 'Para realizar una compra, primero debes registrarte o iniciar sesión.',
             showCancelButton: true,
-            confirmButtonText: 'Registrarme',
-            cancelButtonText: 'Iniciar Sesión'
+            confirmButtonText: 'Registrarse',
+            cancelButtonText: 'Iniciar sesión'
         }).then((result) => {
             if (result.isConfirmed) {
-                // El usuario seleccionó "Registrarme", redirigir al formulario de registro
-                window.location.href = 'registro.html' // Reemplaza con la URL de tu formulario de registro
+                // Redirigir a registro.html
+                window.location.href = 'registro.html'
             } else if (result.dismiss === Swal.DismissReason.cancel) {
-                // El usuario seleccionó "Iniciar Sesión", redirigir al formulario de inicio de sesión
-                window.location.href = 'login.html' // Reemplaza con la URL de tu formulario de inicio de sesión
+                // Redirigir a login.html
+                window.location.href = 'login.html'
             }
         })
     }
 
-    
+
 
 }
 
@@ -184,17 +173,17 @@ function mostrarAlertaCompra() {
 function realizarCompra() {
     // Mostrar la alerta de compra
     mostrarAlertaCompra()
-    
+
 }
 
 
 // Obtener los datos del usuario actual desde sessionStorage
-const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+const currentUser = JSON.parse(sessionStorage.getItem('currentUser'))
 
 // Verificar si el usuario ha iniciado sesión
 if (currentUser && currentUser.username) {
-  // Mostrar el nombre del usuario en el navbar
-  const nombreUsuarioNavbar = `<span class="nav-link text-success">Hola! ${currentUser.username}</span>`;
+    // Mostrar el nombre del usuario en el navbar
+    const nombreUsuarioNavbar = `<span class="nav-link text-success">Hola! ${currentUser.username}</span>`
 
     document.getElementById('user').innerHTML = nombreUsuarioNavbar
 

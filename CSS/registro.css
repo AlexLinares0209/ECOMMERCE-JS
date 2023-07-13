@@ -113,6 +113,15 @@ button:hover {
     cursor: pointer;
 }
 
+.fa-map-location-dot {
+    color: #9d9fa1;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 .fa-envelope {
     color: #9d9fa1;
     position: absolute;
@@ -147,4 +156,31 @@ button:hover {
 
 .green {
     color: green;
+}
+
+
+.titulo {
+    border: none;
+    border: 1px solid black;
+    padding: .8rem;
+    border-radius: 4px;
+    outline: none;
+    grid-column: 1/3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.titulo h4 {
+    font-size: .8rem;
+}
+
+.titulo ul {
+    display: flex;
+    gap: .5rem;
+    font-size: 1.5rem;
+    color: black;
+    list-style: none;
 }

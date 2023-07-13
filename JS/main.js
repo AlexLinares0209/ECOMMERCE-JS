@@ -5,7 +5,7 @@ fetch('./JS/productos.json').then((respuesta) => respuesta.json())
             contenidoProductos += `
             <div class="producto">
             <div class="tarjeta">
-                <img id="imagen-original-1" src="${producto.imagen}" alt="${producto.nombre}">
+                <img class="imagen-producto" src="${producto.imagen}" alt="${producto.nombre}">
                 <span class="oferta">20% OFF</span>
                 <span class="envio"><i class="fa-solid fa-truck"></i> ENVÍO 24 HRS</span>
                 <span class="heart"><i class="fa-solid fa-heart" onclick="agregarProductoFavoritos(${producto.id})"></i></span>

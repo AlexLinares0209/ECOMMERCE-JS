@@ -1,6 +1,7 @@
 [
     {
       "id": 1,
+      "genero": "hombre",
       "tipo": "polos",
       "nombre": "Polo Maui",
       "descripcion": "color negro",
@@ -11,6 +12,7 @@
     },
     {
       "id": 2,
+      "genero": "hombre",
       "tipo": "polos",
       "nombre": "Polo Maui",
       "descripcion": "color verde",
@@ -21,6 +23,7 @@
     },
     {
       "id": 3,
+      "genero": "hombre",
       "tipo": "polos",
       "nombre": "Polo Maui",
       "descripcion": "color azul",
@@ -31,6 +34,7 @@
     },
     {
       "id": 4,
+      "genero": "hombre",
       "tipo": "polos",
       "nombre": "Polo Maui",
       "descripcion": "color celeste",
@@ -41,6 +45,7 @@
     },
     {
       "id": 5,
+      "genero": "hombre",
       "tipo": "casacas",
       "nombre": "Casaca Navigata",
       "descripcion": "color verde / negro",
@@ -51,6 +56,7 @@
     },
     {
       "id": 6,
+      "genero": "hombre",
       "tipo": "casacas",
       "nombre": "Casaca Navigata",
       "descripcion": "color negro",
@@ -61,6 +67,7 @@
     },
     {
       "id": 7,
+      "genero": "hombre",
       "tipo": "casacas",
       "nombre": "Casaca Navigata",
       "descripcion": "color azul / crema",
@@ -71,6 +78,7 @@
     },
     {
       "id": 8,
+      "genero": "hombre",
       "tipo": "casacas",
       "nombre": "Casaca Navigata",
       "descripcion": "color azul / rojo",
@@ -81,6 +89,7 @@
     },
     {
       "id": 9,
+      "genero": "hombre",
       "tipo": "pantalones",
       "nombre": "Pantalon H&M",
       "descripcion": "color negro",
@@ -91,6 +100,7 @@
     },
     {
       "id": 10,
+      "genero": "hombre",
       "tipo": "pantalones",
       "nombre": "Pantalon H&M",
       "descripcion": "color verde",
@@ -101,6 +111,7 @@
     },
     {
       "id": 11,
+      "genero": "hombre",
       "tipo": "pantalones",
       "nombre": "Pantalon H&M",
       "descripcion": "color crema",
@@ -111,6 +122,7 @@
     },
     {
       "id": 12,
+      "genero": "hombre",
       "tipo": "pantalones",
       "nombre": "Pantalon H&M",
       "descripcion": "color gris oscuro",
@@ -119,5 +131,149 @@
       "precio": "S/. 124.00",
       "stock": 15
     }
-  ]
+    ,
+    {
+      "id": 13,
+      "genero": "hombre",
+      "tipo": "shorts",
+      "nombre": "Short H&M",
+      "descripcion": "color negro",
+      "imagen": "./IMAGES/imagen13.png",
+      "precioAntes": "S/. 85.00",
+      "precio": "S/. 68.00",
+      "stock": 10 
+    }
+    ,
+    {
+      "id": 14,
+      "genero": "hombre",
+      "tipo": "shorts",
+      "nombre": "Short H&M",
+      "descripcion": "color gris",
+      "imagen": "./IMAGES/imagen14.png",
+      "precioAntes": "S/. 75.00",
+      "precio": "S/. 60.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 15,
+      "genero": "hombre",
+      "tipo": "shorts",
+      "nombre": "Short H&M",
+      "descripcion": "color negro",
+      "imagen": "./IMAGES/imagen15.png",
+      "precioAntes": "S/. 70.00",
+      "precio": "S/. 56.00",
+      "stock": 13
+    }
+    ,
+    {
+      "id": 16,
+      "genero": "hombre",
+      "tipo": "shorts",
+      "nombre": "Short H&M",
+      "descripcion": "color beige",
+      "imagen": "./IMAGES/imagen16.png",
+      "precioAntes": "S/. 75.00",
+      "precio": "S/. 60.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 17,
+      "genero": "mujer",
+      "tipo": "blusas",
+      "nombre": "blusa manga larga H&M",
+      "descripcion": "color beige",
+      "imagen": "./IMAGES/imagen17.png",
+      "precioAntes": "S/. 95.00",
+      "precio": "S/. 76.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 18,
+      "genero": "mujer", 
+      "tipo": "blusas",
+      "nombre": "blusa manga larga H&M",
+      "descripcion": "color negro",
+      "imagen": "./IMAGES/imagen18.png",
+      "precioAntes": "S/. 95.00",
+      "precio": "S/. 76.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 19,
+      "genero": "mujer", 
+      "tipo": "blusas",
+      "nombre": "Blusa manga larga H&H",
+      "descripcion": "color negro",
+      "imagen": "./IMAGES/imagen19.png",
+      "precioAntes": "S/. 75.00",
+      "precio": "S/. 60.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 20,
+      "genero": "mujer",
+      "tipo": "blusas",
+      "nombre": "Blusa manga larga H&H",
+      "descripcion": "color verde",
+      "imagen": "./IMAGES/imagen20.png",
+      "precioAntes": "S/. 75.00",
+      "precio": "S/. 60.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 21,
+      "genero": "mujer",
+      "tipo": "blusas",
+      "nombre": "Blusa manga larga H&M",
+      "descripcion": "color negro",
+      "imagen": "./IMAGES/imagen21.png",
+      "precioAntes": "S/. 80.00",
+      "precio": "S/. 64.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 22,
+      "genero": "mujer",
+      "tipo": "pantalones",
+      "nombre": "pantalon H&M",
+      "descripcion": "color verde",
+      "imagen": "./IMAGES/imagen22.png",
+      "precioAntes": "S/. 95.00",
+      "precio": "S/. 76.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 23,
+      "genero": "mujer",
+      "tipo": "pantalones",
+      "nombre": "pantalon H&M",
+      "descripcion": "color negro",
+      "imagen": "./IMAGES/imagen23.png",
+      "precioAntes": "S/. 60.00",
+      "precio": "S/. 45.00",
+      "stock": 12
+    }
+    ,
+    {
+      "id": 24,
+      "genero": "mujer",
+      "tipo": "pantalones",
+      "nombre": "pantalon H&M",
+      "descripcion": "color verde",
+      "imagen": "./IMAGES/imagen24.png",
+      "precioAntes": "S/. 75.00",
+      "precio": "S/. 60.00",
+      "stock": 12
+    }
+]
   

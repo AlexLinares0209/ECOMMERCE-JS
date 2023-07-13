@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/registro.css">
+    <link rel="stylesheet" href="./CSS/pago.css">
+
+</head>
+
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><i class="fas fa-shopping-cart"></i> Shopcart</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="nav-bar">
+            <ul id="links">
+                <li><a id="active" class="actived" href="index.html">inicio</a></li>
+                <li><a href="#">nosotros</a></li>
+                <li><a href="#">catálogo</a></li>
+                <li><a href="#">faq</a></li>
+                <li>
+                    <input type="text" name="" id="inputBusqueda" class="input-busqueda" placeholder="Buscar productos">
+                    <i class="fas fa-search" id="btnBuscar"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-heart nav-heart favoritos"
+                        id="botonFavoritos"
+                        type="button" 
+                        data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasWithBothOptions" 
+                        aria-controls="offcanvasWithBothOptions">
+                    </i>
+                </li>
+
+                <li class="iconos"><i class="fa-solid fa-user" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu text-center">
+                        <li class="dropdown-item" id="user"></li>
+                        <li><a class="dropdown-item" href="registro.html">Registrarse</a></li>
+                        <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+                      </ul>
+                </li>
+                
+                <li class="icono-carrito">
+                    <i class="fa-solid fa-cart-shopping carrito"
+                    id="botonCarrito"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                </i>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Pago</h1>
+
+        <form class="form" id="pagoForm">
+
+            <div class="titulo">
+                <h4>Tarjeta de Crédito o Débito</h4>
+                <ul>
+                    <li><i class="fa-brands fa-cc-visa"></i></li>
+                    <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                    <li><i class="fa-brands fa-cc-diners-club"></i></li>
+                    <li><i class="fa-brands fa-cc-amex"></i></li>
+                </ul>
+            </div>
+
+            <div class="input-group input-1">
+                <input type="text" class="input" placeholder="" id="numeroCuenta" name="numeroCuenta" maxlength="16" required>
+                <label class="placeholder">cuenta</label>
+            </div>
+            <div class="group-input">
+                <select name="" id="cuotas" class="input">
+                    <option value="">Total - S/. 20.00</option>
+                    <option value="">3 cuotas</option>
+                    <option value="">6 cuotas</option>
+                    <option value="">9 cuotas</option>
+                    <option value="">12 cuotas</option>
+                </select>
+            </div>
+            <div class="input-group input-2">
+                <input type="text" class="input" placeholder="" id="nombreTarjeta" name="nombreTarjeta" required>
+                <label class="placeholder">nombre del titular</label>
+            </div>
+            <div class="input-group input-2">
+                <input type="date" class="input" id="fechaVencimiento" name="fechaVencimiento" required>
+            </div>
+            <div class="input-group input-2">
+                <input type="text" class="input" placeholder="" id="codigoSeguridad" name="codigoSeguridad" maxlength="3" required>
+                <label class="placeholder">ccv</label>
+            </div>
+            <button type="submit">Realizar pago</button>
+        </form>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- 
+        <script src="./JS/carrito.js"></script>
+    -->
+    
+    <script src="./JS/pago.js"></script>
+    <script src="./JS/funcionesCarrito.js"></script>
+    <script src="./JS/carrito.js"></script>
+
+</body>
+
+</html>

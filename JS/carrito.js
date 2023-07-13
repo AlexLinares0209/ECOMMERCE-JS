@@ -68,3 +68,4 @@ const renderProductosCarrito = () => {
 
     document.getElementById('contenido-carrito').innerHTML = contenido
 }
+
