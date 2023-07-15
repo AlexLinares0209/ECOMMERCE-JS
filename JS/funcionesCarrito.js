@@ -130,8 +130,7 @@ const disminuirCantidad = (id) => {
     }
 }
 
-
-function mostrarAlertaCompra() {
+const mostrarAlertaCompra = () => {
 
     //const carrito = cargarCarritoLS()
 
@@ -160,33 +159,36 @@ function mostrarAlertaCompra() {
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 // Redirigir a login.html
                 window.location.href = 'login.html'
+                }
             }
-        })
+        )
     }
-
-
-
 }
 
 
 // Función para realizar la compra
-function realizarCompra() {
+const realizarCompra = () => {
     // Mostrar la alerta de compra
     mostrarAlertaCompra()
 
 }
 
 
+/*
+
 // Obtener los datos del usuario actual desde sessionStorage
-const currentUser = JSON.parse(sessionStorage.getItem('currentUser'))
+//const currentUser = JSON.parse(sessionStorage.getItem('currentUser'))
+const usuarioActual = JSON.parse(sessionStorage.getItem('usuarioActual'))
 
 // Verificar si el usuario ha iniciado sesión
-if (currentUser && currentUser.username) {
+if (usuarioActual && usuarioActual.username) {
     // Mostrar el nombre del usuario en el navbar
-    const nombreUsuarioNavbar = `<span class="nav-link text-success">Hola! ${currentUser.username}</span>`
+    const nombreUsuarioNavbar = `<span class="nav-link text-success">Hola! ${usuarioActual.username}</span>`
 
     document.getElementById('user').innerHTML = nombreUsuarioNavbar
 
 }
+
+*/
 
 

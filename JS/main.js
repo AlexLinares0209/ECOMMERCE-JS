@@ -1,3 +1,5 @@
+/* <========== Render de todos los productos ==========> */
+
 fetch('./JS/productos.json').then((respuesta) => respuesta.json())
     .then((productos) => {
         let contenidoProductos = ''
@@ -20,12 +22,11 @@ fetch('./JS/productos.json').then((respuesta) => respuesta.json())
                     </div>
                     <div>
                         <button class="boton-añadir-carrito" id="añadir-carrito-btn" onclick="verProducto(${producto.id})" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="fa-solid fa-cart-shopping"></i> Añadir al carrito
-            </button>
+                            <i class="fa-solid fa-cart-shopping"></i> Añadir al carrito
+                        </button>
                     </div>
                 </div>
             </div>
-            
         </div>
         `
         })
@@ -34,6 +35,7 @@ fetch('./JS/productos.json').then((respuesta) => respuesta.json())
     })
 
 
+/* <========== Render badge contador carrito ==========> */
 
 const renderBotonCarrito = () => {
     let botonCarrito = document.getElementById('botonCarrito')
@@ -46,6 +48,10 @@ const renderBotonCarrito = () => {
     botonCarrito.innerHTML = contenido
 }
 
+renderBotonCarrito()
+
+/* <========== Render badge contador favoritos ==========> */
+
 const renderBotonFavoritos = () => {
     let botonFavoritos = document.getElementById('botonFavoritos')
     let contenido = `
@@ -57,36 +63,22 @@ const renderBotonFavoritos = () => {
     botonFavoritos.innerHTML = contenido
 }
 
-renderBotonCarrito()
-
 renderBotonFavoritos()
 
-renderProductosCarrito()
-
-
+//renderProductosCarrito()
 
 // referencia al icono de carrito
+
+//const iconoCarrito = document.querySelector('.carrito')
+
+//iconoCarrito.addEventListener('click', renderProductosCarrito)
+
+
+//const iconoFavoritos = document.querySelector('.favoritos')
+
+//iconoFavoritos.addEventListener('click', renderProductosFavoritos)
+
+
 const iconoCarrito = document.querySelector('.carrito')
 
 iconoCarrito.addEventListener('click', renderProductosCarrito)
-
-
-const iconoFavoritos = document.querySelector('.favoritos')
-
-iconoFavoritos.addEventListener('click', renderProductosFavoritos)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

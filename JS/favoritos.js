@@ -1,3 +1,5 @@
+/* <========== Funciones para guardar y cargar productos seleccionados en favoritos ==========> */
+
 const guardarProductosFavoritosLS = (favoritos) => {
     localStorage.setItem('favoritos', JSON.stringify(favoritos))
 }
@@ -16,6 +18,11 @@ const vaciarFavoritos = () => {
     renderBotonFavoritos()
     renderProductosFavoritos()
 
+}
+
+const estaEnFavoritos = (id) => {
+    const favoritos = cargarProductosFavoritosLS()
+    return favoritos.some(item => item.id === id)
 }
 
 const renderProductosFavoritos = () => {
@@ -65,10 +72,9 @@ const renderProductosFavoritos = () => {
 
 
 
-const estaEnFavoritos = (id) => {
-    const favoritos = cargarProductosFavoritosLS()
-    return favoritos.some(item => item.id === id)
-}
+const iconoFavoritos = document.querySelector('.favoritos')
+
+iconoFavoritos.addEventListener('click', renderProductosFavoritos)
 
 
 const agregarProductoFavoritos = (id) => {

@@ -1,4 +1,4 @@
-/* Funciones para guardar y cargar productos en el carrito */
+/* <========== Funciones para guardar y cargar productos en el carrito ==========> */
 
 const guardarCarritoLS = (carrito) => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -8,6 +8,7 @@ const cargarCarritoLS = () => {
     return JSON.parse(localStorage.getItem('carrito')) || []
 }
 
+/* <========== Render de los productos agregados al carrito ==========> */
 
 const renderProductosCarrito = () => {
     let productos = cargarCarritoLS()
@@ -68,4 +69,12 @@ const renderProductosCarrito = () => {
 
     document.getElementById('contenido-carrito').innerHTML = contenido
 }
+
+/*
+
+const iconoCarrito = document.querySelector('.carrito')
+
+iconoCarrito.addEventListener('click', renderProductosCarrito)
+
+*/
 
