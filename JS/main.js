@@ -12,19 +12,24 @@ fetch('./JS/productos.json').then((respuesta) => respuesta.json())
                 <span class="envio"><i class="fa-solid fa-truck"></i> ENVÍO 24 HRS</span>
                 <span class="heart"><i class="fa-solid fa-heart" onclick="agregarProductoFavoritos(${producto.id})"></i></span>
             </div>
+
             <div class="info">
+            
                 <p class="titulo-producto">${producto.nombre}</p>
                 <p class="descripcion-producto">${producto.descripcion}</p>
+
                 <div class="info-flex">
+
                     <div>
                         <p class="precio-del-producto-oferta"><span>${producto.precioAntes}</span></p>
                         <p class="precio-del-producto">${producto.precio}</p>
                     </div>
+
                     <div>
                         <button class="boton-añadir-carrito" id="añadir-carrito-btn" onclick="verProducto(${producto.id})" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i> Añadir al carrito
-                        </button>
+                            <i class="fa-solid fa-cart-shopping"></i> Añadir al carrito</button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -82,3 +87,4 @@ renderBotonFavoritos()
 const iconoCarrito = document.querySelector('.carrito')
 
 iconoCarrito.addEventListener('click', renderProductosCarrito)
+

@@ -372,7 +372,7 @@ header nav ul li .input-busqueda {
     font-weight: 500;
 }
 
-.info .info-flex {
+.info-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;

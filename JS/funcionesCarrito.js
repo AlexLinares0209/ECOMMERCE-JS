@@ -142,7 +142,7 @@ const mostrarAlertaCompra = () => {
     if (isLoggedIn === 'true') {
         // Usuario ha iniciado sesión, redirigir a envio.html
         window.location.href = 'envio.html'
-        //vaciarCarrito()
+        vaciarCarrito() /* modificado  */
     } else {
         // Usuario no ha iniciado sesión, mostrar alerta con opciones de registro o inicio de sesión
         Swal.fire({
